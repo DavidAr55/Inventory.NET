@@ -1,6 +1,21 @@
 @Inventory.Api_HostAddress = http://localhost:5058
 
-GET {{Inventory.Api_HostAddress}}/weatherforecast/
+GET {{Inventory.Api_HostAddress}}/api/products
 Accept: application/json
 
 ###
+
+GET {{Inventory.Api_HostAddress}}/api/products/1
+
+###
+
+POST {{Inventory.Api_HostAddress}}/api/products
+Content-Type: application/json
+
+{
+  "sku": "RES-001",
+  "name": "Resistor 10k ohm",
+  "unitOfMeasure": "pz",
+  "minimumStockLevel": 100,
+  "categoryId": 1
+}
